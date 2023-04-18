@@ -41,6 +41,14 @@ public class Main {
 
         //! THROWS = AVISO
         //! THROW = ORDEN PARA FORZAR EXCEPCION
+
+//        CREATE OUR OWN EXCEPTIONS
+        try{
+            int result = divide(8, 0);
+            System.out.println(result);
+        }catch(DivideByZeroException e){
+            System.out.println(e.getMessage());
+        }
     }
 
 
@@ -88,5 +96,12 @@ public class Main {
     //* sobrecarga del metodo multiply()
     public static long multiply(long a, long b){
         return a * b;
+    }
+
+    public static int divide(int a, int b) throws DivideByZeroException {
+        if(b == 0){
+            throw new DivideByZeroException("You can't divide by zero");
+        }
+        return a / b;
     }
 }
