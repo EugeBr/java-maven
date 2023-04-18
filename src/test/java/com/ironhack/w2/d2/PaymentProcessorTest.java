@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PaymentProcessorTests {
+public class PaymentProcessorTest {
 
     private Account buyer;
     private Account seller;
